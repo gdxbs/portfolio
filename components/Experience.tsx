@@ -20,13 +20,13 @@ const Experience = () => {
                   borderRadius='1.75rem'
                   className="flex-1 text-white border-neutral-2200 dark:border-slate-800"
                 >
-                  <div className="flex lg:flex-row flex-col lg:items-center p-3 py-6 md:p-5 lg:p-10 gap-2">
+                  <div className="flex lg:flex-row flex-col lg:items-center items-center p-3 py-6 md:p-5 lg:p-10 gap-2">
                     <Image src={card.thumbnail} alt={card.thumbnail} width={128} height={128} className="lg:w-32 md:w-20 w-16"/>
                     <div className="lg:ms-5">
-                      <h1 className="text-start text-xl md:text-2xl font-bold">
+                      <h1 className="lg:text-start text-xl md:text-2xl text-center font-bold">
                         {card.title}
                       </h1>
-                      <p className="text-start text-white-100 mt-3 font-semibold">
+                      <p className="lg:text-start text-white-100 mt-3 text-center font-semibold">
                         {card.desc}
                       </p>
                     </div>

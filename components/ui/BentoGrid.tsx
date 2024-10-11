@@ -34,7 +34,6 @@ export const BentoGridItem = ({
   id,
   title,
   description,
-  //   remove unecessary things here
   img,
   imgClassName,
   titleClassName,
@@ -49,8 +48,8 @@ export const BentoGridItem = ({
   titleClassName?: string;
   spareImg?: string;
 }) => {
-  const leftLists = ["ReactJS", "PyTorch", "Typescript", "MongoDB", "PHP"];
-  const rightLists = ["AngularJS", "NextJS", "TensorFlow", "VueJS", "ThreeJS"];
+  const leftLists = ["MongoDB", "Jest", "TypeScript", "Selenium", "ViteJS"];
+  const rightLists = ["PostgreSQL", "ReactJS", "TestNG", "NextJS", "ThreeJS"];
 
   const [copied, setCopied] = useState(false);
 
@@ -72,13 +71,10 @@ export const BentoGridItem = ({
   return (
     <div
       className={cn(
-        // remove p-4 rounded-3xl dark:bg-black dark:border-white/[0.2] bg-white  border border-transparent, add border border-white/[0.1] overflow-hidden relative
         "row-span-1 relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4",
         className
       )}
       style={{
-        //   add these two
-        //   you can generate the color from here https://cssgradient.io/
         background: "rgb(4,7,29)",
         backgroundColor:
           "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
@@ -91,10 +87,11 @@ export const BentoGridItem = ({
             <Image
               src={img}
               alt={img}
-              className={cn(imgClassName, "object-cover object-center ")}
-              width={200}
-              height={200}
-              objectFit="cover"
+              layout="intrinsic" // or layout="responsive" if you want it to scale responsively
+              width={800} // Adjust to the actual dimensions of your image
+              height={800} // Maintain the correct aspect ratio
+              quality={100} // Ensures high quality
+              className={cn(imgClassName, "object-cover object-center")}
             />
           )}
         </div>
@@ -114,7 +111,6 @@ export const BentoGridItem = ({
           )}
         </div>
         {id === 6 && (
-          // add background animation , remove the p tag
           <BackgroundGradientAnimation>
             <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
           </BackgroundGradientAnimation>
@@ -170,7 +166,7 @@ export const BentoGridItem = ({
             </div>
           )}
           {id === 6 && (
-            <div className="mt-5 relative">
+            <div className="relative mt-5 lg:mt-0">
               {/* button border magic from tailwind css buttons  */}
               {/* add rounded-md h-8 md:h-8, remove rounded-full */}
               {/* remove focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 */}
@@ -184,7 +180,7 @@ export const BentoGridItem = ({
               </div>
 
               <MagicButton
-                title={copied ? "Email is Copied!" : "Copy my email address"}
+                title={copied ? "Email copied!" : "Copy my email"}
                 icon={<IoCopyOutline />}
                 position="left"
                 handleClick={handleCopy}

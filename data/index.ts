@@ -8,17 +8,17 @@ export const navItems = [
   export const gridItems = [
     {
       id: 1,
-      title: "I prioritize collaboration with clients, fostering open communication ",
+      title: "",
       description: "",
       className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
-      imgClassName: "w-full h-full",
+      imgClassName: "w-full h-full relative z-10 object-cover",
       titleClassName: "justify-end",
-      img: "/b1.svg",
+      img: "/me.png",
       spareImg: "",
     },
     {
       id: 2,
-      title: "I'm very flexible with time zones",
+      title: "I'm always available to collaborate.",
       description: "",
       className: "lg:col-span-2 md:col-span-3 md:row-span-2",
       imgClassName: "",
@@ -49,7 +49,7 @@ export const navItems = [
   
     {
       id: 5,
-      title: "Currently Freelancing!",
+      title: "Freelancing!",
       description: "What am I up to?",
       className: "md:col-span-3 md:row-span-2",
       imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
@@ -74,82 +74,49 @@ export const navItems = [
       id: 1,
       title: "NetSpider - Web-Scraping Application",
       des: "Scrape specific web pages in search for posts containing keywords that have been linked to human trafficking.",
-      img: "/netspider2.png",
-      iconLists: ["/re.svg", "/javascript.png","/flask2.png", "/bootstrap2.png", "/python3.png", "/selenium.png", "/pandas.png"],
+      img: "/hsi.webp",
+      iconLists: ["/re.svg", "/javascript.webp","/flask.webp", "/bootstrap.webp", "/python.webp", "/selenium.webp", "/pandas.webp"],
       link: "https://github.com/PauloDrefahl/NetspiderHSI",
     },
     {
       id: 2,
       title: "PAT - AI Patent Checker",
       des: "Simplify the process of making your patent original with PAT, an AI-powered patent checker.",
-      img: "/pat.png",
-      iconLists: ["/re.svg", "/tail.svg", "/dock.svg", "/javascript.png", "/python3.png", "/flask2.png", "/openapi.png"],
+      img: "/pat.webp",
+      iconLists: ["/re.svg", "/tail.svg", "/dock.svg", "/huggingface.webp", "/node.webp", "/pytorch.svg", "/tensorflow.webp", "/flask.webp", "/aws.webp"],
       link: "https://github.com/zesutton2619/PAT",
     },
     {
       id: 3,
-      title: "E-Commerce Website",
-      des: "Coming Soon...",
-      img: "/soon.png",
-      iconLists: [],
-      link: "",
+      title: "Wiki4Anything - Wikipedia Clone",
+      des: "Create an account and upload or edit articles on any topic you can think of. Currently undergoing revisions.",
+      img: "/wiki.webp",
+      iconLists: ["/re.svg", "/bootstrap.webp", "/nodemon.webp", "/jwt.svg", "/mysql.webp", "/antd.webp", "/jest.webp", "/babel.webp"],
+      link: "https://github.com/gdxbs/Wiki",
     },
     {
       id: 4,
-      title: "Banking Platform",
-      des: "Coming Soon...",
-      img: "/soon.png",
-      iconLists: [],
-      link: "",
+      title: "Reddit Automated Testing",
+      des: "Tinker with various functions of Reddit's UI and interactivity using the power of automation.",
+      img: "/reddit.webp",
+      iconLists: ["/selenium.webp", "/intellij.webp", "/python.webp", "/javascript.webp", "xml.svg"],
+      link: "https://github.com/zesutton2619/Software-Testing-Reddit",
     },
     {
       id: 5,
-      title: "Barbershop Website",
-      des: "Coming Soon...",
-      img: "/soon.png",
-      iconLists: [],
-      link: "",
+      title: "Local Barbershop Website",
+      des: "This project is currently in development. Created for Cut It Forward, a local barbershop in Lutz.",
+      img: "/barbershop.webp",
+      iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg", "/next.svg"],
+      link: "https://github.com/gdxbs/barbershop-website",
     },
     {
       id: 6,
-      title: "Healthcare App Platform",
-      des: "Coming Soon...",
-      img: "/soon.png",
-      iconLists: [],
-      link: "",
-    },
-  ];
-  
-  export const testimonials = [
-    {
-      quote:
-        "Best Whitaker College of Engineering Design",
-      name: "Michael Johnson",
-      title: "Director of AlphaStream Technologies",
-    },
-    {
-      quote:
-        "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-      name: "Michael Johnson",
-      title: "Director of AlphaStream Technologies",
-    },
-    {
-      quote:
-        "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-      name: "Michael Johnson",
-      title: "Director of AlphaStream Technologies",
-    },
-    {
-      quote:
-        "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-      name: "Michael Johnson",
-      title: "Director of AlphaStream Technologies",
-    },
-    {
-      quote:
-        "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-      name: "Michael Johnson",
-      title: "Director of AlphaStream Technologies",
+      title: "StreamLine - Banking Platform",
+      des: "This project is currently in development. Streamline your banking experience with this full-stack platform.",
+      img: "/streamline.svg",
+      iconLists: ["re.svg", "/tail.svg", "/ts.svg", "/next.svg", "/appwrite.webp", "/plaid.webp", "/dwolla.webp", "/react-hook-form.webp", "/chartjs.webp"],
+      link: "https://github.com/gdxbs/banking_app",
     },
   ];
   
@@ -157,14 +124,14 @@ export const navItems = [
     {
       id: 1,
       title: "Freelance Web Developer",
-      desc: "Currently working with local barbershop Cut It Forward to develop their new website.",
+      desc: "Leading the development of a website for a local barbershop, from initial concept to deployment.",
       className: "md:col-span-2",
-      thumbnail: "/exp3.svg",
+      thumbnail: "/exp4.svg",
     },
     {
       id: 2,
-      title: "Frontend Engineer Intern - (HSI)",
-      desc: "Worked with Homeland Security Investigations for 9 months to develop a web-scraping application as part of a senior project.",
+      title: "Frontend Engineer Intern",
+      desc: "Worked with Homeland Security Investigations for 9 months to develop a web-scraping application as part of FGCU's senior project.",
       className: "md:col-span-2", // change to md:col-span-2
       thumbnail: "/exp1.svg",
     },
@@ -173,14 +140,14 @@ export const navItems = [
       title: "JavaScript Foundations Professional Certificate",
       desc: "Sponsored by Mozilla, this certificate is designed to help developers learn the fundamentals of JavaScript.",
       className: "md:col-span-2", // change to md:col-span-2
-      thumbnail: "/exp2.svg",
+      thumbnail: "/javascript.webp",
     },
     {
       id: 4,
       title: "Docker Foundations Professional Certificate",
       desc: "Sponsored by Docker, this certificate is designed to help developers learn the fundamentals of Docker.",
       className: "md:col-span-2",
-      thumbnail: "/dockerName.svg",
+      thumbnail: "/dock.svg",
     },
   ];
   
