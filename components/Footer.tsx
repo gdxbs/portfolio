@@ -10,13 +10,14 @@ const Footer = () => {
     return (
       <footer className="w-full pb-10 mb-[100px] md:mb-5 relative" id="contact">
           {/* Background grid image */}
-          <div className="w-full absolute left-0 -bottom-20 min-h-96 z-0">
+          <div className="w-full absolute left-0 -bottom-5 min-h-96 z-0">
               <Image
                 src="/footer-grid.svg"
                 alt="grid"
                 layout="fill"
                 objectFit="cover"
                 className="opacity-50"
+                priority
               />
           </div>
   
@@ -47,7 +48,7 @@ const Footer = () => {
                   {socialMedia.map((profile) => (
                       <button key={profile.id}>
                           <div key={profile.id} className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300">
-                              <a href={profile.link}>
+                              <a href={profile.link} className="flex">
                                   <Image src={profile.img} alt="" width={20} height={20}/>
                               </a>
                           </div>

@@ -2,7 +2,7 @@ import { projects } from '@/data'
 import React from 'react'
 import { PinContainer } from './ui/3d-pin'
 import { FaLocationArrow } from 'react-icons/fa'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 
 const RecentProjects = () => {
   return (
@@ -40,7 +40,7 @@ const RecentProjects = () => {
                             <div className="flex items-center">
                                 {iconLists.map((icon, index) => (
                                     <div key={icon} className="border border-white/[0.2] rounded-full bg-black lg:w-12 lg:h-12 w-8 h-8 flex justify-center items-center" style={{transform:`translateX(-${5 * index * 2}px)`}}>
-                                        <Image src={icon} alt={icon} width={48} height={48} className="p-2" />
+                                        <Image src={icon} alt={icon} width={28} height={28}/>
                                     </div>
                                     ))}
                             </div>
