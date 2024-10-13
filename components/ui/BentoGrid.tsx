@@ -86,25 +86,28 @@ export const BentoGridItem = ({
               src={img}
               alt={img}
               layout={id === 5 ? "fill" : "intrinsic"}
-              width={800}
-              height={850} 
+              width={id !== 5 ? 800 : undefined}
+              height={id !== 5 ? 850 : undefined} 
               quality={100}
-              className={cn(imgClassName, "object-cover object-center")}
+              className={cn(
+                imgClassName,
+                "object-cover object-center",
+                id === 5 ? "opacity-70" : "" // Apply opacity-50 if id is 5
+              )}
               priority={id === 1}
             />
           )}
         </div>
         <div
-          className={`absolute right-0 -bottom-5 ${id === 5 && "w-full opacity-80"
-            } `}
+          className={`absolute right-0 ${id === 5 ? "-bottom-10" : "-bottom-5"}`}
         >
           {spareImg && (
             <Image
               src={spareImg}
               alt={spareImg}
               layout="fixed"
-              width={id === 5 ? 400 : 200}
-              height={id === 5 ? 200 : 100}
+              width={id === 5 ? 452 : 200}
+              height={id === 5 ? 400 : 100}
               className={cn(imgClassName, "object-cover")}
             />
           )}
@@ -132,29 +135,31 @@ export const BentoGridItem = ({
 
           {id === 2 && <GlobeDemo />}
 
+          {/* Tech stack list div */}
           {id === 3 && (
-            <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
-              <div className="flex flex-col gap-3 lg:mt-5 md:gap-3">
-                {leftLists.map((item, i) => (
-                  <span
-                    key={i}
-                    className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]"
-                  >
+          <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
+          {/* tech stack lists */}
+            <div className="flex flex-col gap-3 lg:mt-5 md:gap-3">
+              {leftLists.map((item, i) => (
+                <span
+                  key={i}
+                  className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]"
+                >
                     {item}
-                  </span>
-                ))}
-                <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#10132E]"></span>
-              </div>
-              <div className="flex flex-col gap-3 md:gap-3">
-                <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#10132E]"></span>
-                {rightLists.map((item, i) => (
-                  <span
-                    key={i}
-                    className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]"
-                  >
-                    {item}
-                  </span>
-                ))}
+                </span>
+              ))}
+              <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#10132E]"></span>
+            </div>
+            <div className="flex flex-col gap-3 md:gap-3">
+              <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#10132E]"></span>
+              {rightLists.map((item, i) => (
+                <span
+                  key={i}
+                  className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]"
+                >
+                  {item}
+                </span>
+              ))}
               </div>
             </div>
           )}
