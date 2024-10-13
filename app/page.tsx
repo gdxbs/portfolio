@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Hero from "../components/Hero";
 import { FloatingNav } from "../components/ui/FloatingNav";
 import { GoHomeFill } from "react-icons/go";

@@ -2,7 +2,7 @@ import React from 'react'
 import MagicButton from './ui/MagicButton'
 import { FaLocationArrow } from 'react-icons/fa'
 import { socialMedia } from '@/data'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import { Spotlight } from './ui/Spotlight'
 
 
