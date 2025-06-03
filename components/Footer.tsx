@@ -10,7 +10,7 @@ const Footer = () => {
     return (
       <footer className="w-full pb-10 mb-[100px] md:mb-5 relative" id="contact">
           {/* Background grid image */}
-          <div className="w-full absolute left-0 -bottom-5 min-h-96 z-0">
+          <div className="w-full absolute left-0 xl:-bottom-5 -bottom-12 min-h-96 z-0">
               <Image
                 src="/footer-grid.svg"
                 alt="grid"

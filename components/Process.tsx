@@ -10,7 +10,7 @@ const Process = () => {
       <h1 className="heading">
         My <span className="text-purple">approach</span>
       </h1>
-      <div className="my-20 flex flex-col lg:flex-row items-center justify-center gap-4">
+      <div className="my-20 flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-4">
         <Card 
           title="Planning & Strategy" 
           icon={<AceternityIcon order="Phase 1" />}
@@ -41,7 +41,7 @@ const Process = () => {
           />
         </Card>
         <Card 
-          title="Development & Launch" 
+          title="Final Development & Launch" 
           icon={<AceternityIcon 
           order="Phase 3"/>}
           description="This is where the magic happens! Based on the approved design, 
@@ -135,4 +135,4 @@ export const Icon = ({ className, ...rest }: any) => {
   );
 };
 
-export default Process
+export default Process;

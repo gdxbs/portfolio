@@ -5,8 +5,14 @@ import { TextGenerateEffect } from './ui/TextGenerateEffect'
 import { FaLocationArrow } from 'react-icons/fa'
 
 const Hero = () => {
-  let handleBtnClick=()=>{
-     
+  let handleBtnClick = () => {
+    // Create a link element
+    const link = document.createElement('a');
+    link.href = '/Greg_Bateham_Resume.docx'; // Make sure this file exists in your public folder
+    link.download = 'Greg_Bateham_Resume.docx';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   }
   return (
     <div className='pb-20 pt-36'>
@@ -29,7 +35,7 @@ const Hero = () => {
 
             <TextGenerateEffect
               className='text-center text-[40px] md:text-5xl lg:text-6xl'
-              words='Greg Bateham, Full Stack Developer.'
+              words='Greg Bateham, Software Developer.'
             />
 
             <p className='text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl'>
@@ -37,9 +43,9 @@ const Hero = () => {
 
             </p>
 
-            <a href='#about'>
+            <a>
               <MagicButton
-                title='Learn More'
+                title='Download CV'
                 icon={<FaLocationArrow />}
                 position='right'
                 handleClick={handleBtnClick}
